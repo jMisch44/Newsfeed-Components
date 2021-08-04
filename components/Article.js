@@ -151,7 +151,7 @@ function articleMaker( {title, date, firstParagraph, secondParagraph, thirdParag
 //step 3 return 
   return fullArticle;
 }
-//article div
+//getting html article div
 const articlesDiv = document.querySelector('.articles');
 //step 4 loop over article data
 data.forEach(article => {
