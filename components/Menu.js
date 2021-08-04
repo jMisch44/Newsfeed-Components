@@ -10,22 +10,15 @@ let menuItems = [
 ];
 
 //step 1 
-function menuMaker(array){
   const menuListHolder = document.createElement('div');
   const menuListStart = document.createElement('ul');
-  // let menuItem = document.createElement('li');
-  // const student = document.createElement('li');
-  // const faculty = document.createElement('li');
-  // const whatsNew = document.createElement('li');
-  // const techTrends = document.createElement('li');
-  // const music = document.createElement('li');
-  // const logOut = document.createElement('li');
-  
 //parent child
   menuListHolder.appendChild(menuListStart);
  
 //class names
   menuListHolder.classList.add('menu');
+
+function menuMaker(array){
 //step 2 iterate over array for menu items
   array.forEach((item) => { 
     let menuItem = document.createElement('li');
