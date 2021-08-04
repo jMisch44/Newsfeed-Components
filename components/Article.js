@@ -89,7 +89,45 @@ const data = [
   }
 ];
 
-//change for push 
+//step 1 
+function articleMaker( {title, date, firstParagraph, secondParagraph, thirdParagraph} ){
+  const fullArticle = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const paragraphOne = document.createElement('p');
+  const paragraphTwo = document.createElement('p');
+  const paragraphThree = document.createElement('p');
+  const button = document.createElement('span');
+//parent Child relations
+  fullArticle.appendChild(articleTitle);
+  fullArticle.appendChild(articleDate);
+  fullArticle.appendChild(paragraphOne);
+  fullArticle.appendChild(paragraphTwo);
+  fullArticle.appendChild(paragraphThree);
+  fullArticle.appendChild(button);
+//Adding Classes
+  fullArticle.classList.add('article');
+  articleDate.classList.add('date');
+  button.classList.add('expandButton');
+//text Content
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  paragraphOne.textContent = firstParagraph;
+  paragraphTwo.textContent = secondParagraph;
+  paragraphThree.textContent = thirdParagraph;
+  button.textContent = '+';
+// step 2event listener
+  button.addEventListener('click', event =>{
+    fullArticle.classList.toggle('article-open');
+  })
+//step 3 return 
+  return fullArticle;
+}
+
+//step 4 loop over article data
+// const 
+
+
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
